@@ -8,11 +8,10 @@ from aiogram import Bot, Dispatcher, executor, types
 
 
 
-# Файл, полученный в Google Developer Console
-CREDENTIALS_FILE = 'creds.json'
-# ID Google Sheets документа (можно взять из его URL)
-spreadsheet_id = '1teusj0gRLbg53ZdRDNDe0DT3IaCC_zY-1LQZA7j8jV0'
-# Авторизуемся и получаем service — экземпляр доступа к API
+
+CREDENTIALS_FILE = 'YOUR CREDENTIALS FROM GOOGLE DEVELOPERS CONSOLE'
+spreadsheet_id = 'YOUR SPREADSHEETID FROM GOOGLE SHEETS(YOU CAN TAKE IT FROM URL)'
+# AUTHORISATION
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
     CREDENTIALS_FILE,
     ['https://www.googleapis.com/auth/spreadsheets',
@@ -20,8 +19,8 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(
 httpAuth = credentials.authorize(httplib2.Http())
 service = googleapiclient.discovery.build('sheets', 'v4', http = httpAuth)
 
-"""БОТ"""
-API_TOKEN = '5096148704:AAEZz7CtyneILL6I3lPCdROmQmLk1A68v3c'
+"""BOT ON"""
+API_TOKEN = 'YOUR TELEGRAM BOT TOKEN'
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 # Initialize bot and dispatcher
@@ -29,27 +28,27 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
 
-# Пример чтения файла
+# READ GOOGLESHEET
 values = service.spreadsheets().values().get(
     spreadsheetId=spreadsheet_id,
     range='A:D',
     majorDimension='ROWS'
 ).execute()
 
-'''Здесь код вывода в телеграмм'''
+#CODE
 @dp.message_handler(commands=['start'])
 async def information(message: types.Message):
     await message.answer(
-        "Для просмотра списков объектов введите: '/show'.\n\n"
-        "Для просмотра реестра платежей: '/PaymentsShow'.\n\n"
-        "Для добавления нового объекта введите '/add' и укажите информацию в следующем формате:\n\n"
-        "Местоположения объекта| Отдел| Полное наименование КА| Внутреннее наименование\n\n"
-        "Например внесем новый объект (все пишем в одну строчку(соблюдая пробелы и тире)):\n\n"
-        "/add челябинск т ооо-ромашка парк-гагарина\n\n"
-        "Для добавления нового платежа в реестр введите '/addPay' и укажите информацию в следующем формате:\n\n"
-        "Срок Оплаты| Сумма прихода| Сумма Расхода| Дата поступения задачи| Кто поставил задачу| Кто оплатил| Проект| Суть расхода| Лицо принимающее платеж| Лицо кому предназначаются средства| Реквизиты для оплаты\n\n"
-        "Например внесем новый запрос на платеж (все пишем в одну строчку(соблюдая пробелы и тире)):\n\n"
-        "/addPay 5.дек нет 45000 3.дек Андрей Наталья ООО-Ромашка ЗП-Геодезисту Имангулов-Р-А Мамушкин-А-А 46164567876543\n\n"
+        "TO GET OBJECT LIST FROM FILE-1: '/show'.\n\n"
+        "TO GET PAYMENT PLANNING LIST IN FILE-2: '/PaymentsShow'.\n\n"
+        "TO ADD NEW OBJECT IN FILE-1:'/add' AND FOLOW THE EXAMPLE FURTHER:\n\n"
+        "OBJECT LOCATION| CREW| FULL NAME OF COSTUMER| ONBOARD NAME OF COSTUMER\n\n"
+        "EXAMPLE (ATTENTION ON SPACES(USE '-' INSTEAD SPACING)):\n\n"
+        "/add MONTENEGRO SURVEYORS GIS-SAINS TIVAT-AEROPORT\n\n"
+        "TO INSERT A NEW PAYMENT TO PLAN IN FILE-2  '/addPay' AND FOLOW THE EXAMPLE FURTHER:\n\n"
+        "DATE TO PAY| MONEY CAME AMOUNT| MONEY SPENT| DATE OF TASK ADDED| WHO ADDED| WHOE MADE A TRANSACTION| PROJECT NAME| PAYMENT PURPOSE| WHO RECEVING MONEY| TO WHO MONEY ARE BELONG| CARD NUMBER\n\n"
+        "EXAMPLE (ATTENTION ON SPACES(USE '-' INSTEAD SPACING)):\n\n"
+        "/addPay 5.DEC NONE 4000 3.DEC MARK NATALY GIS-SAINS SURVEYOR-SALARY JONH-SMITH-JR NEO-FROM-MATRIX 2345 3333 3333 4444\n\n"
 
     )
 
@@ -79,7 +78,7 @@ async def adding(message: types.Message):
 
 @dp.message_handler(commands=['PaymentsShow'])
 async def show_payments(message: types.Message):
-    spreadsheet_id = '1AM1KfRs65f7pD_UPjO1jDFwYVy0Gw2zHd-mJJdrbsGY'
+    spreadsheet_id = 'YOUR SPREAD SHEET - 2 USE IT IF U WORK IN DIFFERENT FILES'
     values = service.spreadsheets().values().get(
         spreadsheetId=spreadsheet_id,
         range='A:Z',
@@ -92,7 +91,7 @@ async def show_payments(message: types.Message):
 
 @dp.message_handler(commands=["addPay"])
 async def adding_pay(message: types.Message):
-    spreadsheet_id = '1AM1KfRs65f7pD_UPjO1jDFwYVy0Gw2zHd-mJJdrbsGY'
+    spreadsheet_id = 'YOUR SPREAD SHEET - 2 USE IT IF U WORK IN DIFFERENT FILES'
     filtered_pay = message.text.split()
     print(filtered_pay)
     rows_2 = [
