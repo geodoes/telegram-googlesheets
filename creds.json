@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sanush-spends",
+  "private_key_id": "319ff37464e2466724312166afe0092c4d652c61",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDTHnNd2SFBfwUa\nA+2Dk16E23jlfH2qnRGf0wyx1FtUQeqEwlsmDlLKW9WlxflotgEU2M4VmacMWDgm\nRm+Ro0evn6oM0hQdFmQPuUIkHrQz9Qy7AIKspp9ti7OjZ3YlY9uVevQL5Il6Xa0+\nxLz41baQAU1WAlRT0w+5PP2i9iWQmcN11k1cU0+ydOE7WvNN3K+oVm06ru78/IOB\nEVUyXpOKjJSfYqzEboSVY04wADklbL//DUp/+rCitHuxKRFbo9DardyYO0m4qPli\n5qvZK4GTHiNSGv0vg0LxhojTW+tpu+F4ClaG5CHLvsa5KPmAo4CuAtTkUJGusAxw\nak1RU+b1AgMBAAECggEAA6D93aqaSjxrM4fGwOC7GrCFEvjBVjnt8B/aE4JxcXDS\nnaaTl4Neg/DxKrDM+TJLsXaKkE98UheAG5RRXaD/XfLyItdHljpozOZjzygh89St\n+9bl6B7TFbh1hYUFQF5Hi3m6ESxD+rD6hd4u214dDbuf/y76ERjLJ+V2/KKbgbFC\n6RPT27HsTPrnIWB9awuZBS8dp+vypmSAk1jIFjJseplH7qGE5wW5V4WFQyo9abpM\ndLROpNqOg0ccCLwPqRD4MfX4gh0XL8KQRwDLkKenil4l2G5volISCWiZszWD2q3F\n5ly+GALL42NzCrbyNHeTtsRYy52Li182jFGUGCIbsQKBgQD7ZoUiWxOAtcxcOnLi\ney2HZL2EMxcuA2yL4Te5HYgZed9vi4UkYdkmwQNUwIiQZ+UsjprnkUsfFHmIh4mi\nIIWWZ2iCkbCioOVfMeBXMoodtlPz8n508PhRhvdzRjWJ7GzY2CPUrlzItmAGNSk4\naDz+aiQBBCrfTCwkT8v8xjE/7QKBgQDW+0PGU62Sj021AP4n4ZDN3fwHW/5XkODD\nRunCffCSJhe4IUjJ0wt0f8EshmteqdL7aBeiL4VUdldJGXdZKJFFtxFudYgyxgKK\n808mTX9fFcmRh1ERyZMoE0NFUVVoYGsx9C3CyE4abvHM3RWz0h2FBxEJSdsfJN8N\nnetffnoSKQKBgQDnPv85geMnopJPR6hDcaCIiP7WapRoy9d9t3WlPmfhXzxKg2C9\n/Y9cWXBx9gPoKNkiKi6M0RXzicbc8ieEzTt0BLyaVd7PSQaTkPJV4vQurnb8ztLJ\nSJpxi590FmHK84GP2QjkalqIeVFMhHvdGez47LMfiDDTY2K7J/dwFPJaZQKBgGhS\nAW9qB55I/9JHqw07PgNIJxaDI4bmfMsFzEVey7B/356wOBwH11Uu8VRj3hJPolvx\nBRbkrHRyAKUuQGX5c5U64rCRRAgvYeh/bPcPQDGp5uhBm6tf/5LA1jH659EAiMPy\n04njnVLiZ1+cIP3jhgOZjEDPoA8a20pGSYNLYn0RAoGBAJn8u2AJ5bhIZ5INvR3f\nEGdStJzmXdCCqGjGRuzNl3ujmEdUR6Jx6tSYrz6ri8GJ1oSYiY22S46XFpP44XP7\nKMY0wAUjmJBWpKtNf+0A5S3sRsNaIV+6wJTe3qC9xUjSq8MC1FKxweyCvAxN86OJ\nWD6qdIGquqE2ZGFIzuIfBoY3\n-----END PRIVATE KEY-----\n",
+  "client_email": "account@sanush-spends.iam.gserviceaccount.com",
+  "client_id": "111103506619922305766",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/account%40sanush-spends.iam.gserviceaccount.com"
+}
